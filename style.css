@@ -1,0 +1,127 @@
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #0066cc, #00cc99);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    color: #333;
+}
+
+.container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 1rem auto;
+}
+
+/* Headings */
+h2, h3 {
+    color: #004d99;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+/* Label and Input Fields */
+label {
+    display: block;
+    text-align: left;
+    margin: 0.5rem 0 0.2rem;
+    font-weight: bold;
+    color: #004d99;
+    font-size: 1rem;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+select {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #00b3b3;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem; 
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+button {
+    background-color: #004d99;
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #003366;
+}
+
+
+.new-user {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.new-user a {
+    color: #004d99;
+    text-decoration: none;
+}
+
+.new-user a:hover {
+    text-decoration: underline;
+}
+
+/* Thank You Page */
+#thankyoupage {
+    display: none;
+    text-align: center;
+}
+
+#thankyoupage h2 {
+    color: #28a745;
+    margin-bottom: 1rem;
+}
+
+#thankyoupage p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    h2, h3 {
+        font-size: 1.3rem;
+    }
+
+    label, input, select, button {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,213 @@
+/* styles.css */
+
+/* Reset and basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Styling for the top navigation bar */
+.top-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #003366;
+    padding: 10px 0;
+}
+
+.top-bar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.top-bar a:hover {
+    color: #ffcc00;
+}
+
+#usernameDisplay {
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+.top-bar button {
+    background-color: #ff3333;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.top-bar button:hover {
+    background-color: #cc0000;
+}
+
+/* Content area styling */
+.content {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.content h2 {
+    font-size: 28px;
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Pay Bill Page Specific Styles */
+.pay-bill-container {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.pay-bill-container h3 {
+    color: #004d99;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.pay-bill-container label {
+    display: block;
+    font-weight: bold;
+    color: #004d99;
+    margin-top: 1rem;
+}
+
+.pay-bill-container span {
+    display: block;
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    color: #666;
+}
+
+.pay-bill-container select {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 1rem 0;
+    border: 1px solid #00b3b3;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.pay-bill-container button {
+    background-color: #004d99;
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.pay-bill-container button:hover {
+    background-color: #003366;
+}
+
+/* Card Details Page Specific Styles */
+.card-details-container {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.card-details-container h2 {
+    color: #004d99;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.card-details-container label {
+    display: block;
+    font-weight: bold;
+    color: #004d99;
+    margin-top: 1rem;
+}
+
+.card-details-container input[type="text"],
+.card-details-container input[type="password"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #00b3b3;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.card-details-container input[type="text"]:focus,
+.card-details-container input[type="password"]:focus {
+    border-color: #004d99;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 77, 153, 0.3);
+}
+
+.card-details-container button {
+    background-color: #004d99;
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.card-details-container button:hover {
+    background-color: #003366;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    .pay-bill-container,
+    .card-details-container {
+        padding: 1.5rem;
+    }
+
+    .pay-bill-container h3,
+    .card-details-container h2 {
+        font-size: 1.4rem;
+    }
+
+    .top-bar a,
+    .top-bar button {
+        font-size: 0.9rem;
+    }
+
+    label, input {
+        font-size: 0.9rem;
+    }
+/* Container for the complaint form */
+}

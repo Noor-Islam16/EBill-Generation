@@ -1,0 +1,71 @@
+<!-- RegistrationPage.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="registration-form">
+        <h2>New User Registration</h2>
+
+        <h3>Consumer Details</h3>
+        <label for="consumerNumber">* Consumer Number:</label>
+        <input type="text" id="consumerNumber" placeholder="Consumer Number" required>
+
+        <label for="billNumber">* Bill Number:</label>
+        <input type="text" id="billNumber" placeholder="Last 5 digits" required>
+
+        <h3>User Details</h3>
+        <label for="title">Title</label>
+        <select id="title" required>
+            <option value="" disabled selected>Please Select</option>
+            <option value="Mr.">Mr.</option>
+            <option value="Miss">Miss</option>
+            <option value="Mrs.">Mrs.</option>
+        </select>
+
+        <label for="name">* Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <label for="email">* Email:</label>
+        <input type="email" id="email" placeholder="Enter email address" required>
+
+        <label for="mobile">* Mobile Number:</label>
+        <div class="mobile-input">
+            <select id="countrycode">
+                <option value="+91">0091 - INDIA</option>
+            </select>
+            <input type="tel" id="mobile" placeholder="Mobile Number" required>
+        </div>
+
+        <h3>Login Details</h3>
+        <label for="userId">* User ID:</label>
+        <input type="text" id="userId" required>
+
+        <label for="password">* Password:</label>
+        <input type="password" id="password" required>
+
+        <label for="confirmPassword">* Confirm Password:</label>
+        <input type="password" id="confirmPassword" required>
+
+        <div class="button-group">
+            <button type="button" onclick="resetForm()">Reset</button>
+            <button type="button" onclick="register()">Register</button>
+        </div>
+    </div>
+
+    <div class="container" id="thankyoupage" style="display: none;">
+        <h2>Registered Successfully</h2>
+        <p>Thank you for registering with the eBill Application!</p>
+        <p><strong>Customer ID:</strong> <span id="customerId"></span></p>
+        <p><strong>Customer Name:</strong> <span id="customerName"></span></p>
+        <p><strong>Mobile Number:</strong> <span id="customerMobile"></span></p>
+        <button onclick="goToLogin()">Back to Login</button>
+    </div>
+
+    <script src="registerScript.js"></script>
+</body>
+</html>

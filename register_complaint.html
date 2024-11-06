@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Complaint</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    .complaint-container {
+        background-color: #ffffff;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        max-width: 600px;
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    .complaint-container h2 {
+        color: #004d99;
+        text-align: center;
+        margin-bottom: 1.5rem;
+        font-size: 30px;
+        border-bottom: 2px solid #003366;
+        padding-bottom: 10px;
+    }
+    
+    .complaint-container label {
+        display: block;
+        margin-top: 1rem;
+        color: #004d99;
+        font-weight: bold;
+    }
+    
+    .complaint-container select,
+    .complaint-container input,
+    .complaint-container textarea {
+        width: 100%;
+        padding: 0.8rem;
+        margin: 0.5rem 0;
+        border: 1px solid #00b3b3;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+    
+    .complaint-container select:focus,
+    .complaint-container input:focus,
+    .complaint-container textarea:focus {
+        border-color: #004d99;
+        outline: none;
+    }
+    
+    .complaint-container button {
+        background-color: #004d99;
+        color: white;
+        padding: 0.8rem;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        width: 48%;
+        margin-top: 1rem;
+        transition: background-color 0.3s, transform 0.2s;
+    }
+    
+    .complaint-container button:hover {
+        background-color: #003366;
+        transform: translateY(-2px);
+    }
+    
+    .complaint-container button + button {
+        background-color: #ff3333;
+    }
+    
+    .complaint-container button + button:hover {
+        background-color: #cc0000;
+        transform: translateY(-2px);
+    }
+    
+    .complaint-container textarea {
+        resize: none;
+    }
+</style>
+</head>
+<body>
+    <div class="top-bar">
+        <a href="home.html">Home</a>
+        <a href="pay_bill.html">Pay Bill</a>
+        <a href="register_complaint.html">Register Complaint</a>
+        <a href="complaint_status.html">Complaint Status</a>
+        <span id="usernameDisplay">Welcome, <span id="username"></span></span>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <div class="complaint-container">
+        <h2>Register Complaint/Service</h2>
+        
+        <label for="complaintType">Complaint/Service Type:</label>
+        <select id="complaintType" onchange="populateCategory()">
+            <option value="">Select Type</option>
+            <option value="billing">Billing related</option>
+            <option value="voltage">Voltage related</option>
+            <option value="disruption">Frequent disruption</option>
+            <option value="street_light">Street light related</option>
+            <option value="pole">Pole related</option>
+        </select>
+
+        <label for="category">Category:</label>
+        <select id="category">
+            <option value="">Select Category</option>
+        </select>
+
+        <label for="contactPerson">Contact Person:</label>
+        <input type="text" id="contactPerson" required>
+
+        <label for="consumerNumber">Consumer Number:</label>
+        <input type="text" id="consumerNumber" maxlength="23" required>
+
+        <label for="description">Problem Description:</label>
+        <textarea id="description" rows="4" required></textarea>
+
+        <label for="mobileNumber">Mobile Number:</label>
+        <input type="text" id="mobileNumber" maxlength="10" required>
+
+        <label for="address">Address:</label>
+        <textarea id="address" rows="3" required></textarea>
+
+        <button onclick="submitComplaint()">Submit Complaint</button>
+        <button onclick="resetForm()">Cancel</button>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

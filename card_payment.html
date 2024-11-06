@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Card Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="top-bar">
+        <a href="home.html">Home</a>
+        <a href="pay_bill.html">Pay Bill</a>
+        <a href="register_complaint.html">Register Complaint</a>
+        <a href="complaint_status.html">Complaint Status</a>
+        <span id="usernameDisplay">Welcome, <span id="username"></span></span>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <div class="card-details-container">
+        <h2>Card Payment</h2>
+
+        <label for="cardNumber">Credit Card Number:</label>
+        <input type="text" id="cardNumber" minlength="16" maxlength="16" required>
+
+        <label for="cardHolderName">Card Holder Name:</label>
+        <input type="text" id="cardHolderName" minlength="10" required>
+
+        <label for="expiryDate">Expiry Date (MM/YY):</label>
+        <input type="text" id="expiryDate" placeholder="MM/YY" required>
+
+        <label for="cvv">CVV:</label>
+        <input type="password" id="cvv" minlength="3" maxlength="3" required>
+
+        <button onclick="makePayment()">Make Payment</button>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
